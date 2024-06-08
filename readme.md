@@ -41,8 +41,32 @@ Metrics: Accuracy, Loss (for training and validation data)
 
 ## Interpretation and validation
 
-Performance:
+**Performance**
+
 The model's performance was evaluated using accuracy and loss metrics on both the training and validation sets. The following results were observed:
 
-- Training Accuracy: Improved steadily over epochs, reaching around 93%.
+- Training Accuracy: Improved steadily over epochs, reaching around 94.99%.
 - Validation Accuracy: Reached approximately 93% after fine-tuning.
+
+**Validation**
+
+To perform some tests I validated the model with different sample images. Out of 50 images 6 were classified wrong.
+
+To further evaluate the model I have build a classification report and confusion matrix.
+
+- Precision: 0.94 for Organic, 0.92 for Recyclable
+- Recall: 0.93 for Organic, 0.94 for Recyclable
+- F1-Score: 0.95 for Organic, 0.93 for Recyclable
+- Accuracy: 0.94
+
+**Potential Issues**
+
+- High Accuracy Interpretation: High accuracy in both training and validation sets suggests that the model has learned to generalize well from the training data to new, unseen data. This is the ideal scenario. However, it is important to ensure that the dataset is representative of the real-world scenario where the model will be deployed.
+- Overfitting Check: the accuracy is extremely high (close to 100%) on the training set and slightly lower but still very high on the validation set, it could indicate some degree of overfitting. This could very possibly be the case when the model learns the training data too well, including the noise, which can sometimes lead to slightly lower performance on the validation set.
+
+**Checking other projects and models with same dataset**
+I have checked other projects which did use the same dataset. On kaggle there were some projects visible. The accuracy of them was in the range between 82% up to 94%. So similar results regarding model performance in terms of accuracy.
+
+## My conclusion
+
+I think I successfully developed a deep learning model for waste classification using ResNet50 as my basemodel. The model has high accuracy and robustness, making it usable for automated waste sorting system or in general waste management. It was a insightfull and interesting project and a great learning opportunity.
