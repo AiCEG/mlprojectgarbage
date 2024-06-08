@@ -59,7 +59,7 @@ To further evaluate the model I have build a classification report and confusion
 - F1-Score: 0.95 for Organic, 0.93 for Recyclable
 - Accuracy: 0.94
 
-**Potential Issues**
+**Critical thinking**
 
 - High Accuracy Interpretation: High accuracy in both training and validation sets suggests that the model has learned to generalize well from the training data to new, unseen data. This is the ideal scenario. However, it is important to ensure that the dataset is representative of the real-world scenario where the model will be deployed.
 - Overfitting Check: the accuracy is extremely high (close to 100%) on the training set and slightly lower but still very high on the validation set, it could indicate some degree of overfitting. This could very possibly be the case when the model learns the training data too well, including the noise, which can sometimes lead to slightly lower performance on the validation set.
