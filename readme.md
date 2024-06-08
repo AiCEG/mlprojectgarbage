@@ -1,10 +1,17 @@
 # Garbage Classification
 
+## Setup
+
+1. Use Python Version 3.10.14
+2. Install the dependencies from the requirements.txt file.
+3. All the code is in the ml_garbageclassification_project.ipynb file.
+4. run step by step for best experience. the model validation part can be run independently without training the model (model is beeing loaded). (The best_model.keras file is on git lsf so you may need to download that seperately)
+
 ## Project Goal and Motivation
 
-The project was to develop a machine learning model to classify waste images into two categories. organic and recyclable. For this the Waste Classification Dataset from mendeley was used.
+The project was to develop a machine learning model to classify waste images into two categories, organic and recyclable. For this the Waste Classification Dataset from mendeley was used.
 
-Efficient waste classification is critical for waste management systems. Helping to reduce waste and promote recycling is key to improve sustainability. Improving efficiency and accuracy for waste sorting will improve sustainability (reducing improper disposal, reducing pollution, more recycling, etc.). For example, the project could contribute to a more efficient recycling process and help achieving sustanability goals.
+Efficient waste classification is critical for waste management systems. Helping to reduce waste and promote recycling is key to improve sustainability. Enhancing efficiency and accuracy for waste sorting will boost sustainable solutions (reducing improper disposal, reducing pollution, more recycling, etc.). The project could contribute to a more efficient recycling process and help achieving sustanability goals.
 
 ## Data
 
@@ -24,7 +31,7 @@ I chose ResNet50 as my pretrained convolutional neural network model for this pr
 
 - Base Model: ResNet50
 - Global Average Pooling: To Reduce the spatial dimensions of the feature map.
-- Dense Layer: With relu activation (ReLU activation function is used to introduce nonlinearity in a neural network, helping mitigate the vanishing gradient problem during machine learning model training and enabling neural networks to learn more complex relationships in data)
+- Dense Layer: With ReLU activation (ReLU activation function is used to introduce nonlinearity in a neural network, helping mitigate the vanishing gradient problem during machine learning model training and enabling neural networks to learn more complex relationships in data)
 - Dropout Layer: randomly sets input units to 0. Helps to prevent overfitting.
 - Ouput Layer: a sigmoid function to output the classification (two classes in our dataset so binary classification)
 
@@ -62,11 +69,12 @@ To further evaluate the model I have build a classification report and confusion
 **Critical thinking**
 
 - High Accuracy Interpretation: High accuracy in both training and validation sets suggests that the model has learned to generalize well from the training data to new, unseen data. This is the ideal scenario. However, it is important to ensure that the dataset is representative of the real-world scenario where the model will be deployed.
-- Overfitting Check: the accuracy is extremely high (close to 100%) on the training set and slightly lower but still very high on the validation set, it could indicate some degree of overfitting. This could very possibly be the case when the model learns the training data too well, including the noise, which can sometimes lead to slightly lower performance on the validation set.
+- Overfitting Check: the accuracy is high (close to 100%) on the training set and slightly lower but still high on the validation set, it could indicate some degree of overfitting. This could very possibly be the case when the model learns the training data too well, including the noise, which can sometimes lead to slightly lower performance on the validation set.
 
 **Checking other projects and models with same dataset**
-I have checked other projects which did use the same dataset. On kaggle there were some projects visible. The accuracy of them was in the range between 82% up to 94%. So similar results regarding model performance in terms of accuracy.
+
+I have checked other projects which did use the same dataset. On kaggle there were some projects visible. The accuracy of them was in the range between 82% up to 94%. Similar results regarding model performance in terms of accuracy.
 
 ## My conclusion
 
-I think I successfully developed a deep learning model for waste classification using ResNet50 as my basemodel. The model has high accuracy and robustness, making it usable for automated waste sorting system or in general waste management. It was a insightfull and interesting project and a great learning opportunity.
+I successfully developed a deep learning model for waste classification using ResNet50 as my basemodel. The model has high accuracy and robustness, making it usable for automated waste sorting system or in general waste management. It was a insightfull and interesting project and a great learning opportunity.
